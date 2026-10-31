@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d12" />
+    <title>ORBIT Terminal</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">O</span>
+          <div>
+            <div class="brand-name">ORBIT <span>TERMINAL</span></div>
+            <div class="brand-caption">UNIFIED COMMAND ENVIRONMENT</div>
+          </div>
+        </div>
+        <div class="system-status">
+          <span class="status-dot"></span>
+          <span>LOCAL SYSTEM</span>
+        </div>
+      </header>
+
+      <section id="atlas" class="atlas">
+        <div class="eyebrow"><span>01</span> / ENVIRONMENT ATLAS</div>
+        <h1>Where do you<br />want to <span>operate?</span></h1>
+        <p class="intro">
+          Select a command environment. ORBIT will connect directly to the
+          shell installed on this machine.
+        </p>
+
+        <div class="scan-line">
+          <span class="scan-indicator"></span>
+          <span id="scan-status">INITIALIZING SHELL DISCOVERY</span>
+          <span class="scan-rule"></span>
+          <span id="shell-count">-- FOUND</span>
+        </div>
+
+        <div id="shell-list" class="shell-list" aria-live="polite">
+          <div class="loading-card">Scanning available command environments…</div>
+        </div>
+
+        <div id="atlas-message" class="atlas-message" role="status"></div>
+
+        <footer class="atlas-footer">
+          <span>ORBIT CORE <span class="muted">/ SHELL DETECTION</span></span>
+          <span>SESSION TYPE <span class="muted">LOCAL PTY</span></span>
+          <span>BUILD <span class="muted">0.1.0 · PREVIEW</span></span>
+        </footer>
+      </section>
+
+      <section id="terminal-view" hidden>
+        <div class="terminal-toolbar">
+          <button id="back-to-atlas" type="button">← ENVIRONMENTS</button>
+          <span id="active-shell-name">TERMINAL</span>
+          <span class="terminal-live"><span class="status-dot"></span> SESSION LIVE</span>
+        </div>
+        <div id="terminal"></div>
+      </section>
+    </main>
+  </body>
+</html>

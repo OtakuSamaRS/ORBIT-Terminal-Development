@@ -1,0 +1,12 @@
+node_modules/
+dist/
+src-tauri/target/
+orbit-backup-*/
+release-backup/
+.env*
+**/.env*
+*.bak
+*.backup
+src-tauri/src-tauri/
+.DS_Store
+Thumbs.db
